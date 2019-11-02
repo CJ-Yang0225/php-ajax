@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+</head>
+<script type="text/javascript" src="./js/request.xhr.js"></script>
+
+<body>
+  <h2>The XMLHttpRequest Object</h2>
+
+  <h3>Start typing a name in the input field below:</h3>
+
+  <p>Suggestions:
+    <span id="txtHint"></span>
+  </p>
+
+  <p>First name:
+    <input type="text" id="txt1" onkeyup="showHint(this.value)">
+  </p>
+
+  <button onclick='showUsers()'>Show Users</button>
+
+  <p id="newDiv"></p>
+
+  <!-- <script>
+      function showHint(str) {
+        var xhttp;
+        if (str.length == 0) {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "./gethint.php?q=" + str, true);
+        xhttp.send();
+      }
+  
+      function select() {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.querySelector('#newDiv').innerHTML = this.responseText;
+          }
+        };
+        xhttp.open('GET', './api/search.php', true);
+        xhttp.send();
+      }
+  
+      function remove(id) {
+        var xhttp;
+        xhttp = new XMLHttpRequest()
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            alert(this.responseText);
+            select();
+          }
+        }
+        xhttp.open('GET', './api/delete.php?id=' + id, true);
+        xhttp.send();
+      }
+    </script> -->
+
+</body>
+
+</html>
